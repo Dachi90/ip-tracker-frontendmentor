@@ -5,30 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+
   
   <title>Frontend Mentor | IP Address Tracker</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <div class="wrapper">
+    <div class="header-container">
+      <header class="header">
+        <h1> IP Address Tracker</h1>
+        <form class="ip-form">
+          <input class ="ip-input" type="text" placeholder="Ip address...">
+          <input class ="ip-button" type="button" value=">">
+        </form>
+      </header>
+    </div>
 
-  IP Address Tracker
+    <main class="main">
+      <section class="data-container">
+        <div class="data">
+          <p class="subtitle"> IP ADDRESS </p>
+          <p class="primary ip-data">192.212.174.101</p>
+        </div>
+        <div class="data">
+          <p class="subtitle"> LOCATION </p>
+          <p class="primary location-data">Barcelona, España</p>
+        </div>
+        <div class="data">
+          <p class="subtitle"> TIME ZONE </p>
+          <p class="primary timezone-data">UTC -05:00</p>
+        </div>
+        <div class="data">
+          <p class="subtitle"> ISP </p>
+          <p class="primary isp-data">Spacex Starlink</p>
+        </div>
+      </section>
+    </main>
 
-  Search for any IP address or domain
+    <section class="map">
 
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    </section>
+    
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </footer>
   </div>
+  
 </body>
 </html>

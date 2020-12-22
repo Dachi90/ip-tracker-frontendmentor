@@ -1,0 +1,137 @@
+:root {
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+/* header */
+
+.header-container {
+  grid-column: 1/2;
+  grid-row: 1/3;
+
+  background-image: url("/images/pattern-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+.header h1 {
+  color: white;
+  font-weight: 700;
+}
+
+.ip-input {
+  width: 90%;
+  padding: 0.7rem;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  outline: none;
+}
+
+.ip-button {
+  width: 10%;
+  margin-left: -6px;
+  padding: 0.7rem;
+  border: 1px solid black;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  outline: none;
+  background-color: var(--very-dark-gray);
+  color: white;
+  cursor: pointer;
+}
+
+/* main */
+
+.main {
+  grid-column: 1/2;
+  grid-row: 2/4;
+  z-index: 1;
+}
+
+.data-container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.data-container :last-child {
+  border: none;
+}
+
+.data {
+  padding: 0.3rem;
+  width: 90%;
+  margin: auto;
+  border-bottom: solid 1px var(--dark-gray);
+}
+
+.subtitle {
+  font-size: 0.6rem;
+  margin: 0;
+  color: var(--dark-gray);
+  font-weight: 400;
+}
+
+.primary {
+  color: var(--very-dark-gray);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+/* Map */
+
+.map {
+  grid-column: 1/2;
+  grid-row: 3/-1;
+  background-color: var(--dark-gray);
+}
+
+/* Footer */
+
+.attribution {
+  grid-column: 1/2;
+  grid-row: 6/-1;
+  align-self: end;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+  .header h1 {
+    font-size: 1.2rem;
+  }
+}
