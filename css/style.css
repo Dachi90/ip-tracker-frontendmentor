@@ -47,6 +47,11 @@ body {
   font-weight: 700;
 }
 
+.ip-form {
+  margin: auto;
+  width: 80%;
+}
+
 .ip-input {
   width: 90%;
   padding: 0.7rem;
@@ -95,14 +100,17 @@ body {
   grid-column: 1/2;
   grid-row: 2/4;
   z-index: 999;
+  align-self: center;
 }
 
 .data-container {
   width: 90%;
   margin: auto;
   text-align: center;
-  background-color: white;
   border-radius: 10px;
+  background-color: #e6e8e9;
+  opacity: 0.9;
+  display: grid;
 }
 
 .data-container :last-child {
@@ -157,6 +165,34 @@ body {
 
 @media (max-width: 375px) {
   .header h1 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+  }
+  .data {
+    padding: 0.1rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    margin-top: 3rem;
+  }
+
+  .ip-form {
+    width: 60%;
+    margin: auto;
+  }
+
+  .data-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  .data {
+    border-bottom: none;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
